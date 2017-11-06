@@ -88,10 +88,12 @@ $(function() {
     });
 
     $("#btnEqual").click(function(){
-      var val = eval(res);
-      $("#screen").text(val);
-      res += "=" + val;
-      sendMessage(res);
-      res = "";
+      if(res != ""){
+        var val = eval(res);
+        $("#screen").text(val);
+        res += "=" + val;
+        sendMessage(res);
+        res = "";
+      }
     });
 })
