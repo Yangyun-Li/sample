@@ -72,6 +72,7 @@ $(function() {
     // Hide the chat controls, we don't want the user sending messages until
     // they have given us a username
     var res = "";
+    var prev = "";
     $("#chatControls").hide();
     $("#table").hide();
     $("#error1").hide();
@@ -83,14 +84,15 @@ $(function() {
     $("#submit").click(function() {sendMessage("haha");});
     $(".btn").click(function(){
       var val = $(this).text();
+      if(isNaN(prev) && isNaN(val)) return;
       if(isNaN(val) && res == "") return;
-        if((res == "") || (res == "0" && !isNaN(val))){
-          $("#screen").text(val);
-        }else{
-          $("#screen").append(val);
-        }
-        res += val;
-      
+      if((res == "") || (res == "0" && !isNaN(val))){
+        $("#screen").text(val);
+      }else{
+        $("#screen").append(val);
+      }
+      res += val;
+      prev = val;
     });
     $("#btnEqual").click(function(){
       if(res != ""){
