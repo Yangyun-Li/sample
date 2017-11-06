@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+  <br><br><br>
+  <center>
+    <div class="container">
+      <h2 class="ui header" style="width: 310px">
+        <i class="calculator icon"></i>
+        <div class="content">Super Simple Calculator</div>
+      </h2>
+      <br>
+      <div class="ui form">
+        <div id="field1" class="four wide field">
+          <input type="text" id="username" name="username" placeholder="Enter username">
+          <div id="error1" class="ui pointing red basic label">Please enter a name first!</div>
+        </div>
+        <button id="userSet" class="ui button">Set Username</button>
+      </div>
+      <table id="table" class="ui collapsing celled table" style="background-color: black">
+        <tbody>
+          <tr>
+            <td colspan="4"><div class="ui message"><p id="screen">0</p></div></td>
+          </tr>
+          <tr>
+            <td><button id="btn" value="1" class="btn fluid ui button">1</button></td>
+            <td><button id="btn" value="2" class="btn fluid ui button">2</button></td>
+            <td><button id="btn" value="3" class="btn fluid ui button">3</button></td>
+            <td><button id="btn" value="+" class="btn fluid ui button">+</button></td>
+          </tr>
+          <tr>
+            <td><button id="btn" value="4" class="btn fluid ui button">4</button></td>
+            <td><button id="btn" value="5" class="btn fluid ui button">5</button></td>
+            <td><button id="btn" value="6" class="btn fluid ui button">6</button></td>
+            <td><button id="btn" value="-" class="btn fluid ui button">-</button></td>
+          </tr>
+          <tr>
+            <td><button id="btn" value="7" class="btn fluid ui button">7</button></td>
+            <td><button id="btn" value="8" class="btn fluid ui button">8</button></td>
+            <td><button id="btn" value="9" class="btn fluid ui button">9</button></td>
+            <td><button id="btn" value="*" class="btn fluid ui button">*</button></td>
+          </tr>
+          <tr>
+            <td><button id="btn" value="0" class="btn fluid ui button">0</button></td>
+            <td colspan="2"><button id="btnEqual" value="=" class="fluid ui button">=</button></td>
+            <td><button id="btn" value="/" class="btn fluid ui button">/</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="log">
+      </div>
+    </div>
+  </center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Banned words</h1>
+        </header>
+        <ul id = "listEntries">
+          <% wordlist.forEach(function(lst){ %>
+              <li> <%= lst.username %> --- <%= lst.bannedwords %> </li>
+          <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

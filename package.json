@@ -1,0 +1,27 @@
+{
+  "name": "individual_hwk2",
+  "version": "1.0.0",
+  "description": "__Submitted by:__ lixx3524@umn.edu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umn-5117-f16/module-2-individual-homework-Yangyun-Li.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umn-5117-f16/module-2-individual-homework-Yangyun-Li/issues"
+  },
+  "homepage": "https://github.com/umn-5117-f16/module-2-individual-homework-Yangyun-Li#readme",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.10",
+    "socket.io": "^1.7.4"
+  },
+  "devDependencies": {}
+}

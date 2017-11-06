@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Super Easy Calculator</h1>
+        </header>
+        <input type="text" id="username"><button id="userSet" class="ui primary button">Set Username</button>
+        <div id="chatEntries"></div>
+        <div id="chatControls">
+            <input type="text" id="messageInput">
+            <button id="submit">Enter</button>
+        </div>
+    </div>
+</body>
+</html>
