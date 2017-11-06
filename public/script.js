@@ -82,11 +82,16 @@ $(function() {
     // If the user clicks the button to send a message we call sendMessage
     $("#submit").click(function() {sendMessage("haha");});
     $(".btn").click(function(){
-      if(res == "" || res == "0") $("#screen").text($(this).text());
-      else $("#screen").append($(this).text());
-      res += $(this).text();
+      var val = $(this).text();
+      if(isNaN(val) && res == "") return;
+        if((res == "") || (res == "0" && !isNaN(val))){
+          $("#screen").text(val);
+        }else{
+          $("#screen").append(val);
+        }
+        res += val;
+      
     });
-
     $("#btnEqual").click(function(){
       if(res != ""){
         var val = eval(res);
