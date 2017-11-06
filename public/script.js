@@ -17,10 +17,10 @@ function setUsername() {
 function addMessage(msg, username) {
   var children = $("#log").children();
   if(children.length == 10)  children[9].remove();
-  $("#log").prepend('<div class="ui list"><div class="item"><i class="history icon"></i><div class="content"><p>'
+  $("#log").prepend('<div class="item"><i class="history icon"></i><div class="content"><p>'
                   + username + ' : '
                   + msg
-                  + '</p></div></div></div>');
+                  + '</p></div></div>');
 }
 
 function addToList(word, username) {
